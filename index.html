@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout" id="layout"></div>
+    <section id="confirm-section" class=" confirm-section">
+        <h2>Are you sure?</h2>
+        <p>You want to finish your exam?</p>
+        <div class="buttons">
+            <button id="okay-btn">Okay</button>
+            <button class="cancel-btn" id="cancel-btn">Cancel</button>
+        </div>
+    </section>
+    <main class="main-page">
+        <section class="message" id="message">
+            <p id="message-text">Please select an answer</p>
+            <button>x</button>
+        </section>
+        <section id="choosing-section" class="choosing-section">
+            <h2>What Kind of questions do you want?</h2>
+            <div class="subjectListBtns">
+            </div>
+        <button id="get-btn" class="get-btn">Get questions!</button>
+        </section>
+        <section class="start-section hide">
+            <button>Start</button>
+        </section>
+
+        <section class="question-section hide">
+            
+            <div class="question-div">
+                <h2></h2>
+                <ul class="answers-ul">
+                    <!-- <li class="selected-answer">3</li>
+                    <li class="incorrect">5</li>
+                    <li class="correct">8</li>
+                    <li>7</li> -->
+                </ul>
+            </div>
+
+            <div class="control-div">
+                <button id="prev-btn"><i class="fa-solid fa-angles-left"></i>Prev</button>
+                <button id="check-btn">Check<i class="fa-solid fa-circle-check"></i></button>
+                <button id="next-btn">Next<i class="fa-solid fa-angles-right"></i></button>
+            </div>
+
+            <div class="progress-div">
+                <label for="progress">Question <span id="current-question-span"></span> of <span id="number-of-question-span"></span></label>
+                <progress min="0" max="3" value="1" id="progress"></progress>
+            </div>
+        </section>
+
+        <section class="result-section hide">
+            <h2>Your Result</h2>
+            <p><span id="score-p"></span></p>
+            <span id="grade-span"></span>
+            <button id="try-again-btn">Try again</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
