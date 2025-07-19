@@ -1398,6 +1398,7 @@ function checkAnswerHandler() {
       selectedLi.classList.add('correct')
     } else {
       selectedLi.classList.add('incorrect')
+      checkBtn.disabled = true
     }
     
     selectedAnswers[currentQuestionIndex] = {
