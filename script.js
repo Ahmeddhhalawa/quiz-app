@@ -1248,7 +1248,6 @@ let currentQuestion = null
 
 const shuffleQuestionHandler = (array = questions) => 
    array.sort(() => Math.random() - 0.5);
-console.log("Hello")
 
   function startQuiz() {
    shuffledQuestions = shuffleQuestionHandler()
@@ -1373,7 +1372,6 @@ function selectedAnswerHandler(answer, index, rightAnswer) {
     index,
     check: false,
   };
-
 }
 
 function checkAnswerHandler() {
@@ -1395,18 +1393,12 @@ function checkAnswerHandler() {
       li.classList.remove("correct")
       li.classList.remove("incorrect")
     })
-    
-    
-    
     const selectedLi = document.getElementById(`answer-${index}`)
-    
-    
     if(selectedAnswer === rightAnswer) {
       selectedLi.classList.add('correct')
     } else {
       selectedLi.classList.add('incorrect')
     }
-    
     
     selectedAnswers[currentQuestionIndex] = {
       ...selectedAnswers[currentQuestionIndex],
